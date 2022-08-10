@@ -16,14 +16,9 @@ function submitData() {
   } else if (massage == "") {
     return alert("massage harus diisi");
   }
-  console.log(name);
-  console.log(email);
-  console.log(phone);
-  console.log(subject);
-  console.log(massage);
 
   const emailRecever = "aditiakurniawanx@gmail.com";
   let a = document.createElement("a");
-  a.href = `mailto:${emailRecever}?subject=${subject}&body=halo saya ${name} \n ${massage} \n hubungi saya ${phone} `;
+  a.href = `mailto:${emailRecever}?subject=${subject}&body=halo saya ${name} \n ${massage} \n hubungi saya via nomer ${phone} atau ${email}`;
   a.click();
 }

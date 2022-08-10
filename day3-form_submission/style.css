@@ -11,7 +11,7 @@ nav {
     display: flex;
     height: 7vh;
     font-size: 17px;
-    padding: 10px 0px;
+    padding: 11px 0px;
 }
 .nav-left{
     flex: 50%;
@@ -29,6 +29,9 @@ nav {
     text-decoration: none;
     color: black;
     padding: 15px; 
+}
+.nav-left a img{
+    width: 48px;
 }
 .nav-right{
     flex: 50%;
@@ -66,7 +69,10 @@ section{
     justify-content: center;
     background-color: white;
     padding: 50px;
-    box-shadow: 0px 2px 2px rgb(182, 182, 182);box-shadow: 0px 6px 36px rgb(182, 182, 182);
+    box-shadow: 0px 6px 36px rgb(182, 182, 182);
+}
+section:hover{
+    box-shadow: 0px 2px 6px rgb(255, 255, 255);
 }
 .section-left{ 
     flex: 70%;
