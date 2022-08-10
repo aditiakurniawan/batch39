@@ -19,6 +19,6 @@ function submitData() {
 
   const emailRecever = "aditiakurniawanx@gmail.com";
   let a = document.createElement("a");
-  a.href = `mailto:${emailRecever}?subject=${subject}&body=halo saya ${name} \n ${massage} \n hubungi saya via nomer ${phone} atau ${email}`;
+  a.href = `mailto:${emailRecever}?subject=${subject}&body=halo saya ${name} %0D%0A ${massage} %0D%0A hubungi saya via nomer : ${phone} atau %0D%0A via email : ${email}`;
   a.click();
 }

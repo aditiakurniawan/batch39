@@ -111,6 +111,7 @@ section:hover{
     display: block;
     padding-bottom: 10px;
 }
+.cv a:hover{color: orangered;}
 .button-contact a:hover{
     background-color: orangered;
     box-shadow: 0px 2px 10px rgb(143, 142, 142);
@@ -118,6 +119,15 @@ section:hover{
 .cv img{
     margin-left: 5px;
     width: 21px
+}
+.cv a img:hover{
+    position: relative;
+    animation: mymove 800ms infinite;
+    animation-timing-function: ease;}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 5px;}
 }
 .sosmed ul{
     display: flex;
@@ -128,7 +138,8 @@ section:hover{
     display: inline;
     padding-right: 20px;
 }
-li img:hover{ width: 36px;}
+li img:hover{ width: 34px;
+}
 li img{
     width: 30px;
 }
