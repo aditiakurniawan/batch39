@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Project</title>
+    <link rel="icon" href="assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="myproject.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#blog">My Project</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </nav>
+    <form onsubmit="addBlog(event)">
+      <h1>ADD MY PROJECT</h1>
+      <div class="container-form">
+        <div>
+          <label for="title">Project Name</label>
+          <input id="title" type="text" placeholder="Enter Project Name" />
+        </div>
+        <div class="date">
+          <div class="start">
+            <label for="start">Start Date</label>
+            <input id="start" type="date" />
+          </div>
+          <div class="end">
+            <label for="end">End Date</label>
+            <input id="end" type="date" />
+          </div>
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea
+            name=""
+            id="description"
+            cols="30"
+            rows="10"
+            style="resize: none"
+            placeholder="Enter Description"
+          ></textarea>
+        </div>
+        <div class="technologi">
+          <label for="technologi">Technologies</label>
+          <table>
+            <tr>
+              <td>
+                <div>
+                  <input type="checkbox" class="checkbox" id="tech" />
+                  <h4>Node js</h4>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <input type="checkbox" class="checkbox" id="tech" />
+                  <h4>Next js</h4>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <input type="checkbox" class="checkbox" id="tech" />
+                  <h4>React js</h4>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <input type="checkbox" class="checkbox" id="tech" />
+                  <h4>TypeScript</h4>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="upload">
+          <label for="upload">Upload Images</label>
+          <input type="file" name="upload" id="upload" value="choose" />
+        </div>
+        <div class="submit">
+          <button>Submit</button>
+        </div>
+      </div>
+    </form>
+    <div class="project">
+      <div class="myproject">
+        <h1>MY PROJECT</h1>
+        <div class="container-project">
+          <div class="project-card">
+            <img src="assets/img.png" alt="" />
+            <h3>Dumbways Mobile App - 2021</h3>
+            <h4>durasi : 3 bulan</h4>
+            <br />
+            <h5>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolore
+              nam est dolorum at. Eveniet doloribus aut laborum recusandae
+            </h5>
+            <br />
+            <div class="logo">
+              <img src="" alt="logo" />
+              <img src="" alt="logo" />
+              <img src="" alt="logo" />
+              <img src="" alt="logo" />
+            </div>
+            <div class="button">
+              <button class="bt-edit">edit</button>
+              <button class="bt-delete">delete</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img.png" alt="" />
+            <h3>Dumbways Mobile App - 2021</h3>
+            <h4>durasi : 3 bulan</h4>
+            <br />
+            <h5>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolore
+              nam est dolorum at. Eveniet doloribus aut laborum recusandae
+            </h5>
+            <br />
+            <div class="logo">
+              <img src="" alt="logo" />
+              <img src="" alt="logo" />
+              <img src="" alt="logo" />
+              <img src="" alt="logo" />
+            </div>
+            <div class="button">
+              <button class="bt-edit">edit</button>
+              <button class="bt-delete">delete</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/img.png" alt="" />
+            <h3>Dumbways Mobile App - 2021</h3>
+            <h4>durasi : 3 bulan</h4>
+            <br />
+            <h5>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolore
+              nam est dolorum at. Eveniet doloribus aut laborum recusandae
+            </h5>
+            <br />
+            <div class="logo">
+              <img src="" alt="logo" />
+              <img src="" alt="logo" />
+              <img src="" alt="logo" />
+              <img src="" alt="logo" />
+            </div>
+            <div class="button">
+              <button class="bt-edit">edit</button>
+              <button class="bt-delete">delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="blog.js"></script>
+</html>

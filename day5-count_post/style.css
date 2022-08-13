@@ -1,0 +1,164 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dce0e4;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #F4F3F3;
+    display: flex;
+    height: 7vh;
+    font-size: 17px;
+    padding: 11px 0px;
+}
+.nav-left{
+    flex: 50%;
+    display: flex;
+    padding-left: 60px;
+    align-items: center;
+}
+.nav-left li{
+    display: inline;  
+}
+.nav-left ul{
+    display: flex;
+}
+.nav-left a{
+    text-decoration: none;
+    color: black;
+    padding: 15px; 
+}
+.nav-left a img{
+    width: 48px;
+}
+.nav-right{
+    flex: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 60px;
+}
+.nav-right a{
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 7px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.nav-left a:hover{
+    font-weight: bold;
+}
+.nav-right a:hover{
+    background-color: orangered;
+    box-shadow: 0px 2px 10px rgb(143, 142, 142);
+}
+.container{
+    margin-top: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+section{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0px 6px 36px rgb(182, 182, 182);
+}
+section:hover{
+    box-shadow: 0px 2px 6px rgb(255, 255, 255);
+}
+.section-left{ 
+    flex: 70%;
+    padding-right: 50px;
+}
+.section-left p { 
+    text-align: justify;
+    margin-bottom: 40px;
+    padding-right: 20px;
+}
+.section-right{
+    flex: 30%;
+}
+.download{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.button-contact{
+    padding-right: 20px;
+}
+.button-contact a{
+    text-decoration: none;
+    background-color: black;
+    color: rgb(245, 245, 245);
+    width: 85px;
+    text-align: center;
+    border-radius: 15px;
+    display: block;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+}
+.cv a {
+    text-decoration: none;
+    color: black; 
+    display: block;
+    padding-bottom: 10px;
+}
+.cv a:hover{color: orangered;}
+.button-contact a:hover{
+    background-color: orangered;
+    box-shadow: 0px 2px 10px rgb(143, 142, 142);
+}
+.cv img{
+    margin-left: 5px;
+    width: 21px
+}
+.cv a img:hover{
+    position: relative;
+    animation: mymove 800ms infinite;
+    animation-timing-function: ease;}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 5px;}
+}
+.sosmed ul{
+    display: flex;
+    padding-left: 0px;
+    margin: 40px 0px;
+}
+.sosmed li{
+    display: inline;
+    padding-right: 20px;
+}
+li img:hover{ width: 34px;
+}
+li img{
+    width: 30px;
+}
+.card {
+    width: 300px;
+    margin: auto;
+    padding-bottom: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 50px rgb(192, 192, 192);
+}
+.card:hover{
+    width: 80%;
+    margin: auto;
+}
+.card img {
+    width: 100%; border-radius: 10px 10px 0px 0px;
+}
+.card h2, p {
+    text-align: center; margin: 0px; 
+    margin-top: 5px;
+    padding: 0px;
+}

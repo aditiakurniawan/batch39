@@ -1,0 +1,100 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dce0e4;
+      }
+form {
+    width: 480px;
+    margin: auto;
+    padding: 100px;
+      }
+form h1{
+    text-align: center;
+    margin: 40px 0px;
+      }
+form div {
+    margin-top: 15px;
+}
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+form input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgb(200, 200, 200);
+    background-color:#F4F3F3;
+    border: 1px solid rgb(208, 208, 208);
+}
+input:hover,textarea:hover, select:hover{
+    border: 2px solid rgb(121, 121, 121);
+}
+.date{
+    display: flex;
+    flex: 50%;
+}
+.date input {
+    width: 220px;
+    margin-right: 15px;
+}
+
+.checkbox {
+    width: 12px;
+    zoom: 1.4;
+    margin: 0px;
+}
+.tech {
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(131, 131, 131);
+    margin-right: 100px;
+    margin-left: 10px;
+}
+.tech:hover{
+    color: black;
+}
+.cekbox {
+    display: flex; 
+    margin-top: 0px;  
+} 
+input[type=file]{
+    color: #B2ABAB;
+    margin-top:6px;
+    padding: 0px 26px 0px 0px;
+    cursor: pointer;
+}
+#upload::-webkit-file-upload-button{
+    background: #e4e4e4;
+    border: 1px solid rgb(202, 202, 202);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #B2ABAB;
+    cursor: pointer;
+}
+#upload::-webkit-file-upload-button:hover{
+    color: black;
+}
+form button{
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px;
+    padding: 9px 42px;
+    border-radius: 21px;
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color: orangered;
+    box-shadow: 0px 2px 10px rgb(143, 142, 142);
+}
+.submit{
+    display: flex;
+    justify-content:flex-end;
+    width: 104%;
+    margin-top: 20px;
+}
+

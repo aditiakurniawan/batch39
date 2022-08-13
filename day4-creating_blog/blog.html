@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Project</title>
+    <link rel="icon" href="assets/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="myproject.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">My Project</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </nav>
+    <form onsubmit="addBlog(event)">
+      <h1>ADD MY PROJECT</h1>
+      <div class="container-form">
+        <div>
+          <label for="title">Project Name</label>
+          <input id="title" />
+        </div>
+        <div class="date">
+          <div class="start">
+            <label for="start">Start Date</label>
+            <input id="start" type="date" />
+          </div>
+          <div class="end">
+            <label for="end">End Date</label>
+            <input id="end" type="date" />
+          </div>
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea
+            name=""
+            id="description"
+            cols="30"
+            rows="10"
+            style="resize: none"
+          ></textarea>
+        </div>
+        <div class="technologi">
+          <label for="technologi">Technologies</label>
+          <div class="cekbox">
+            <div class="checkboxleft">
+              <div>
+                <input
+                  type="checkbox"
+                  id="nodejs"
+                  class="checkbox"
+                  name="checkboxProject"
+                  value="nodejs"
+                />
+                <label for="nodejs" class="tech">Node Js</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reactjs"
+                  class="checkbox"
+                  name="checkboxProject"
+                  value="reactjs"
+                />
+                <label for="reactjs" class="tech">React Js</label>
+              </div>
+            </div>
+            <div class="checkboxright">
+              <div>
+                <input
+                  type="checkbox"
+                  id="nextjs"
+                  class="checkbox"
+                  name="checkboxProject"
+                  value="nextjs"
+                />
+                <label for="nextjs" class="tech">Next Js</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="typescript"
+                  class="checkbox"
+                  name="checkboxProject"
+                  value="typescript"
+                />
+                <label for="typescript" class="tech">Typescript</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="upload">
+          <label for="upload">Upload Images</label>
+          <input type="file" name="upload" id="upload" value="choose" />
+        </div>
+        <div class="submit">
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+    <div class="project">
+      <div class="myproject">
+        <h1>MY PROJECT</h1>
+        <div id="container-project">
+          <div class="project-card">
+            <img src="assets/img.png" alt="" />
+            <a href="detail.html"><h3>Dumbways Mobile App - 2021</h3></a>
+            <h4>durasi : 3 bulan</h4>
+            <br />
+            <h5>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolore
+              nam est dolorum at. Eveniet doloribus aut laborum recusandae
+            </h5>
+            <br />
+            <div class="logo">
+              <img src="assets/nextjs.png" alt="logo" />
+              <img src="assets/nodejs.png" alt="logo" />
+              <img src="assets/reactjs.png" alt="logo" />
+              <img src="assets/typescript.png" alt="logo" />
+            </div>
+            <div class="button">
+              <button class="bt-edit">edit</button>
+              <button class="bt-delete">delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="inputblog.js"></script>
+</html>
