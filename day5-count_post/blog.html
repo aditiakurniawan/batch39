@@ -3,6 +3,10 @@
   <head>
     <title>My Project</title>
     <link rel="icon" href="assets/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="myproject.css" />
     <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="style.css" />
@@ -13,7 +17,7 @@
         <a href="index.html"><img src="assets/logo.png" alt="logo" /></a>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#blog">My Project</a></li>
+          <li><a href="blog.html">My Project</a></li>
         </ul>
       </div>
       <div class="nav-right">
@@ -25,7 +29,7 @@
       <div class="container-form">
         <div>
           <label for="title">Project Name</label>
-          <input id="title" type="text" placeholder="Enter Project Name" />
+          <input id="title" />
         </div>
         <div class="date">
           <div class="start">
@@ -45,112 +49,85 @@
             cols="30"
             rows="10"
             style="resize: none"
-            placeholder="Enter Description"
           ></textarea>
         </div>
         <div class="technologi">
           <label for="technologi">Technologies</label>
-          <table>
-            <tr>
-              <td>
-                <div>
-                  <input type="checkbox" class="checkbox" id="tech" />
-                  <h4>Node js</h4>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <input type="checkbox" class="checkbox" id="tech" />
-                  <h4>Next js</h4>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div>
-                  <input type="checkbox" class="checkbox" id="tech" />
-                  <h4>React js</h4>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <input type="checkbox" class="checkbox" id="tech" />
-                  <h4>TypeScript</h4>
-                </div>
-              </td>
-            </tr>
-          </table>
+          <div class="cekbox">
+            <div class="checkboxleft">
+              <div>
+                <input
+                  type="checkbox"
+                  id="nodejs"
+                  class="checkbox"
+                  name="checkboxProject"
+                  value="nodejs"
+                />
+                <label for="nodejs" class="tech">Node Js</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reactjs"
+                  class="checkbox"
+                  name="checkboxProject"
+                  value="reactjs"
+                />
+                <label for="reactjs" class="tech">React Js</label>
+              </div>
+            </div>
+            <div class="checkboxright">
+              <div>
+                <input
+                  type="checkbox"
+                  id="nextjs"
+                  class="checkbox"
+                  name="checkboxProject"
+                  value="nextjs"
+                />
+                <label for="nextjs" class="tech">Next Js</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="typescript"
+                  class="checkbox"
+                  name="checkboxProject"
+                  value="typescript"
+                />
+                <label for="typescript" class="tech">Typescript</label>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="upload">
           <label for="upload">Upload Images</label>
           <input type="file" name="upload" id="upload" value="choose" />
         </div>
         <div class="submit">
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </div>
     </form>
     <div class="project">
       <div class="myproject">
         <h1>MY PROJECT</h1>
-        <div class="container-project">
+        <div id="container-project">
           <div class="project-card">
             <img src="assets/img.png" alt="" />
-            <h3>Dumbways Mobile App - 2021</h3>
-            <h4>durasi : 3 bulan</h4>
+            <a href="detail.html"><h3>Dumbways Mobile App - 2021</h3></a>
+            <h5>durasi : 3 bulan</h5>
             <br />
-            <h5>
+            <h6>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolore
               nam est dolorum at. Eveniet doloribus aut laborum recusandae
-            </h5>
+            </h6>
             <br />
             <div class="logo">
-              <img src="" alt="logo" />
-              <img src="" alt="logo" />
-              <img src="" alt="logo" />
-              <img src="" alt="logo" />
-            </div>
-            <div class="button">
-              <button class="bt-edit">edit</button>
-              <button class="bt-delete">delete</button>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="assets/img.png" alt="" />
-            <h3>Dumbways Mobile App - 2021</h3>
-            <h4>durasi : 3 bulan</h4>
-            <br />
-            <h5>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolore
-              nam est dolorum at. Eveniet doloribus aut laborum recusandae
-            </h5>
-            <br />
-            <div class="logo">
-              <img src="" alt="logo" />
-              <img src="" alt="logo" />
-              <img src="" alt="logo" />
-              <img src="" alt="logo" />
-            </div>
-            <div class="button">
-              <button class="bt-edit">edit</button>
-              <button class="bt-delete">delete</button>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="assets/img.png" alt="" />
-            <h3>Dumbways Mobile App - 2021</h3>
-            <h4>durasi : 3 bulan</h4>
-            <br />
-            <h5>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolore
-              nam est dolorum at. Eveniet doloribus aut laborum recusandae
-            </h5>
-            <br />
-            <div class="logo">
-              <img src="" alt="logo" />
-              <img src="" alt="logo" />
-              <img src="" alt="logo" />
-              <img src="" alt="logo" />
+              <img src="assets/nextjs.png" alt="logo" />
+              <img src="assets/nodejs.png" alt="logo" />
+              <img src="assets/reactjs.png" alt="logo" />
+              <img src="assets/typescript.png" alt="logo" />
             </div>
             <div class="button">
               <button class="bt-edit">edit</button>
@@ -161,5 +138,5 @@
       </div>
     </div>
   </body>
-  <script src="blog.js"></script>
+  <script src="inputblog.js"></script>
 </html>
