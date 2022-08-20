@@ -36,9 +36,6 @@ nav a:hover{
 .profil{
     border-radius: 10px 10px 0px 0px;
 }
-.card-img-top{
-    border-radius: 10px;
-}
 .btcard{
     padding: 2px 83px !important;
     border-radius: 7px;

@@ -17,15 +17,20 @@
       integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon" />
     <title>Add Project</title>
   </head>
   <body class="bg-abu">
     <nav class="navbar navbar-expand-lg bg-light py-3">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/logo.png" alt="logo" width="46" height="33" />
+        <a class="navbar-brand" href="/">
+          <img
+            src="/assets/images/logo.png"
+            alt="logo"
+            width="46"
+            height="33"
+          />
         </a>
         <button
           class="navbar-toggler"
@@ -44,7 +49,7 @@
               <a
                 class="nav-link text-black fs-5"
                 aria-current="page"
-                href="index.html"
+                href="/"
                 >Home</a
               >
             </li>
@@ -52,14 +57,14 @@
               <a
                 class="nav-link fs-5 px-3 text-black fw-bold active"
                 aria-current="page"
-                href="myproject.html"
+                href="/myproject"
                 >Add Project</a
               >
             </li>
           </ul>
           <form class="d-flex" role="search">
             <button class="btn btn-dark fs-5 px-4 py-1 navbtn">
-              <a href="contact.html">Contact Me</a>
+              <a href="/contact">Contact Me</a>
             </button>
           </form>
         </div>
@@ -68,7 +73,7 @@
     <div class="container bg-abu justify-content-center align-items-center p-5">
       <p class="fs-1 fw-bolder text-center my-4">ADD MY PROJECT</p>
       <div class="container-form m-5 px-5">
-        <form class="px-5">
+        <form class="px-5" action="/myproject" method="post">
           <div class="px-5">
             <div class="mb-3 px-5">
               <label
@@ -80,6 +85,7 @@
                 type="text"
                 class="form-control form-control-lg mb-4 py-3"
                 id="projectname"
+                name="InputName"
               />
               <div class="d-flex justify-content-between">
                 <div>
@@ -92,6 +98,7 @@
                     type="date"
                     class="form-control form-control-lg mb-4 w-auto px-5 formdate py-3"
                     id="startdate"
+                    name="startdate"
                   />
                 </div>
                 <div>
@@ -104,6 +111,7 @@
                     type="date"
                     class="form-control form-control-lg mb-4 w-auto px-5 py-3 formdate"
                     id="enddate"
+                    name="enddate"
                   />
                 </div>
               </div>
@@ -117,6 +125,7 @@
                   class="form-control"
                   placeholder=""
                   id="description"
+                  name="description"
                   style="height: 200px"
                 ></textarea>
               </div>
@@ -132,8 +141,9 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        value=""
+                        value="nodejs"
                         id="flexCheckDefault"
+                        name="flexCheckDefault"
                       />
                       <label
                         class="form-check-label fs-5 fw-bold"
@@ -146,8 +156,9 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        value=""
+                        value="reactjs"
                         id="flexCheckDefault"
+                        name="flexCheckDefault"
                       />
                       <label
                         class="form-check-label fs-5 fw-bold"
@@ -162,8 +173,9 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        value=""
+                        value="nextjs"
                         id="flexCheckDefault"
+                        name="flexCheckDefault"
                       />
                       <label
                         class="form-check-label fs-5 fw-bold"
@@ -176,8 +188,9 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        value=""
+                        value="typeScript"
                         id="flexCheckDefault"
+                        name="flexCheckDefault"
                       />
                       <label
                         class="form-check-label fs-5 fw-bold"
@@ -198,6 +211,7 @@
                 <input
                   class="form-control form-control-lg mb-3"
                   id="uploadimage"
+                  name="uploadimage"
                   type="file"
                 />
               </div>
