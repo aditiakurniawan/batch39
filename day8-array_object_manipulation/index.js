@@ -7,15 +7,18 @@ app.use("/assets", express.static(__dirname + "/assets"));
 app.use(express.urlencoded({ extended: false }));
 
 let dataBlog = [];
-console.log(dataBlog);
+let islogin = true;
+
 app.get("/", (req, res) => {
   let data = dataBlog.map(function (item) {
     return {
       ...item,
+      islogin,
       duration: getDistanceTime(new Date(item.start), new Date(item.end)),
     };
   });
-  res.render("index", { dataBlog: data });
+
+  res.render("index", { islogin, dataBlog: data });
 });
 app.get("/contact", (req, res) => {
   res.render("contact");
@@ -23,14 +26,59 @@ app.get("/contact", (req, res) => {
 app.get("/myproject", (req, res) => {
   res.render("myproject");
 });
-app.get("/detail/:id", (req, res) => {
-  let id = request.params.id;
+
+app.get("/detail/:index", (req, res) => {
+  let index = req.params.index;
+  let data = dataBlog[index];
+
+  data.duration = getDistanceTime(new Date(data.start), new Date(data.end));
+  console.log(data);
   res.render("detail", {
-    id,
-    title: judul,
-    description: deskripsi,
+    data,
   });
 });
+
+app.get("/delete-myproject/:index", (req, res) => {
+  let index = req.params.index;
+  dataBlog.splice(index, 1);
+
+  res.redirect("/");
+});
+
+app.get("/editproject/:index", (req, res) => {
+  let index = req.params.index;
+
+  let data = {
+    title: dataBlog[index].title,
+    description: dataBlog[index].description,
+    start: dataBlog[index].start,
+    end: dataBlog[index].end,
+    node: dataBlog[index].node,
+    next: dataBlog[index].next,
+    type: dataBlog[index].type,
+    react: dataBlog[index].react,
+    image: dataBlog[index].image,
+  };
+
+  res.render("editproject", { index, data });
+});
+
+app.post("/editproject/:index", (req, res) => {
+  let index = req.params.index;
+
+  dataBlog[index].title = req.body.InputName;
+  dataBlog[index].description = req.body.description;
+  dataBlog[index].start = req.body.startdate;
+  dataBlog[index].end = req.body.enddate;
+  dataBlog[index].node = req.body.nodejs;
+  dataBlog[index].next = req.body.nextjs;
+  dataBlog[index].type = req.body.typeScript;
+  dataBlog[index].react = req.body.reactjs;
+  dataBlog[index].image = req.body.uploadimage;
+
+  res.redirect("/");
+});
+
 app.post("/myproject", (req, res) => {
   let title = req.body.InputName;
   let start = req.body.startdate;

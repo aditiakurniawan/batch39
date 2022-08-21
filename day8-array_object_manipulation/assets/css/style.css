@@ -17,11 +17,17 @@ nav a:hover{
 .bg-abu{
     background-color: #E2E6EA !important;
 }
+.cardcontain{
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-evenly;
+}
 .card{
     border-radius: 20px;
     box-shadow: 0px 1px 30px #D9DCDE;
     border: none;
-}
+} 
 .card-body a{
     text-decoration: none ;
     color: black;

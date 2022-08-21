@@ -49,7 +49,7 @@
               <a
                 class="nav-link text-black fw-bold active fs-5"
                 aria-current="page"
-                href="index.html"
+                href="/"
                 >Home</a
               >
             </li>
@@ -182,9 +182,9 @@
     <section class="myproject bg-light p-5">
       <p class="fs-1 fw-bolder text-center my-5 pb-5">MY PROJECT</p>
       <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            {{#each dataBlog}}
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 cardcontain">
+          {{#each dataBlog}}
+          <div class="col "> 
             <div class="card p-3">
               <img
                 src="/assets/images/{{this.image}}"
@@ -192,10 +192,8 @@
                 alt="..."
               />
               <div class="card-body px-0 py-3">
-                <a href="/detail">
-                  <h5 class="card-title mb-0 fw-semibold">
+                <a href="/detail/{{@index}}">
                     {{this.title}}
-                  </h5>
                 </a>
                 <h5 class="fw-light fs-6 text-secondary">durasi : {{this.duration}}</h5>
                 <p class="card-text py-3">
@@ -245,19 +243,19 @@
                 <div class="d-flex justify-content-evenly mt-5">
                   <a
                     class="link-light bg-black text-decoration-none px-5 fw-semibold btcard"
-                    href=""
+                    href="/editproject/{{@index}}"
                     >edit</a
                   >
                   <a
                     class="link-light bg-black text-decoration-none px-5 fw-semibold btcard"
-                    href=""
+                    href="/delete-myproject/{{@index}}"
                     >delete</a
                   >
                 </div>
               </div>
-            </div>
-            {{/each}}
+            </div>    
           </div>
+          {{/each}}
         </div>
       </div>
     </section>

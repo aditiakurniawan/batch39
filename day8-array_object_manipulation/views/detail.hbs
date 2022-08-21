@@ -65,7 +65,7 @@
       </div>
     </nav>
     <div class="container-fluid bg-abu p-5 ">
-        <h1 class="text-center mt-4 pb-4 fw-bolder ">DumbWays Web App</h1>
+        <h1 class="text-center mt-4 pb-4 fw-bolder ">{{data.title}}</h1>
         <div class="row m-5">
             <div class="col-lg-8">
                 <img src="/assets/images/img.png" class="img-fluid  pb-1 pe-5 ps-0" />
@@ -79,39 +79,47 @@
                         <div class="d-flex pb-2 align-content-center mb-3">
                            <img src="/assets/images/calendar.png" alt="date" width="40"
                             height="40">
-                           <h3 class="px-3 pt-2 abu fw-semibold fs-4 ">12 jan 2021 - 11 feb 2021</h3>
+                           <h3 class="px-3 pt-2 abu fw-semibold fs-4 ">{{data.start}} - {{data.end}}</h3>
                         </div>
                         <div class="d-flex pb-2 ">
                             <img src="/assets/images/clock.png" alt="time" width="40"
                             height="40">
-                            <h3 class="px-3 pt-2 abu fw-semibold fs-4">1 mounth</h3>
+                            <h3 class="px-3 pt-2 abu fw-semibold fs-4">{{data.duration}}</h3>
                         </div>
                     </div>
                     <h2 class="pt-5 pb-2 fw-semibold mb-3">Technologies</h2>
                     <div class="d-flex ">
                         <div>
+                            {{#if data.react}}
                             <div class="d-flex pe-5 pb-4" >
-                                <img src="/assets/images/reactjs.png" alt="reactjs" width="40"
+                                <img src="/assets/images/{{data.react}}.png" alt="reactjs" width="40"
                                 height="40">
                                 <h3 class="px-3 pt-2 abu fw-semibold fs-4">React Js</h3>
                             </div>
+                            {{/if}}
+                             {{#if data.node}}
                             <div class="d-flex">
-                                <img src="/assets/images/nodejs.png" alt="nodejs" width="40"
+                                <img src="/assets/images/{{data.node}}.png" alt="nodejs" width="40"
                                 height="40">
                                 <h3 class="px-3 pt-2 abu fw-semibold fs-4">Node Js</h3>
                             </div>
+                            {{/if}}
                         </div>
                         <div>
+                            {{#if data.next}}
                             <div class="d-flex pb-4">
-                                <img src="/assets/images/javascript.png" alt="javascript" width="40"
+                                <img src="/assets/images/{{data.next}}.png" alt="javascript" width="40"
                                 height="40">
-                                <h3 class="px-3 pt-2 abu fw-semibold fs-4">Javascript</h3>
+                                <h3 class="px-3 pt-2 abu fw-semibold fs-4">Next Js</h3>
                             </div>
+                            {{/if}}
+                            {{#if data.type}}
                             <div class="d-flex">
-                                <img src="/assets/images/socket.png" alt="socket" width="40"
+                                <img src="/assets/images/{{data.type}}.png" alt="socket" width="40"
                                 height="40">
-                                <h3 class="px-3 pt-2 abu fw-semibold fs-4">Socket</h3>
+                                <h3 class="px-3 pt-2 abu fw-semibold fs-4">Typescript</h3>
                             </div>
+                            {{/if}}
                         </div>
                     </div>
                 </div>
@@ -119,31 +127,7 @@
         </div>
         <div>
             <h5 class="fs-5 mx-5 fw-normal lh-base detailtext">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate cum
-                vel veniam, a debitis voluptatibus iure ipsam tempore delectus
-                necessitatibus tenetur culpa totam porro expedita quae eius? Recusandae,
-                iusto itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maxime mollitia, molestiae quas vel sint commodi repudiandae
-                consequuntur voluptatum laborum numquam blanditiis harum quisquam eius
-                sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident
-                similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
-                earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid
-                culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
-                nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque
-                error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis
-                modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias
-                error harum maxime adipisci amet laborum. Perspiciatis minima nesciunt
-                dolorem! Officiis iure rerum voluptates a cumque velit quibusdam sed
-                amet tempora. Sit laborum ab, eius fugit doloribus tenetur fugiat,
-                temporibus enim commodi iusto libero magni deleniti quod quam
-                consequuntur! Commodi minima excepturi repudiandae velit hic maxime
-                doloremque. Quaerat provident commodi consectetur veniam similique ad
-                earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo
-                fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores
-                labore suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto
-                ab laudantium modi minima sunt esse temporibus sint culpa, recusandae
-                aliquam numquam totam ratione voluptas quod exercitationem fuga.
-                Possimus quis earum veniam quasi aliquam eligendi, placeat qui corporis!
+                {{data.description}}
             </h5>         
         </div>
     </div>
