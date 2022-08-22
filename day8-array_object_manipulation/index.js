@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
       duration: getDistanceTime(new Date(item.start), new Date(item.end)),
     };
   });
-
+  console.log(data);
   res.render("index", { islogin, dataBlog: data });
 });
 app.get("/contact", (req, res) => {
@@ -32,7 +32,6 @@ app.get("/detail/:index", (req, res) => {
   let data = dataBlog[index];
 
   data.duration = getDistanceTime(new Date(data.start), new Date(data.end));
-  console.log(data);
   res.render("detail", {
     data,
   });
