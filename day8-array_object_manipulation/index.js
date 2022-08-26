@@ -15,10 +15,11 @@ app.get("/", (req, res) => {
       ...item,
       islogin,
       duration: getDistanceTime(new Date(item.start), new Date(item.end)),
+      sDate: getFullTime(new Date(item.start)),
+      eDate: getFullTime(new Date(item.end)),
     };
   });
-  console.log(data);
-  res.render("index", { islogin, dataBlog: data });
+  res.render("index", { islogin, data });
 });
 app.get("/contact", (req, res) => {
   res.render("contact");
@@ -32,9 +33,10 @@ app.get("/detail/:index", (req, res) => {
   let data = dataBlog[index];
 
   data.duration = getDistanceTime(new Date(data.start), new Date(data.end));
-  res.render("detail", {
-    data,
-  });
+  data.startDate = getFullTime(new Date(data.start));
+  data.endDate = getFullTime(new Date(data.end));
+  console.log(data);
+  res.render("detail", { data });
 });
 
 app.get("/delete-myproject/:index", (req, res) => {
@@ -146,6 +148,41 @@ function getDistanceTime(start, end) {
   } else {
     return `${distenDay} Day`;
   }
+}
+
+function getFullTime(time) {
+  let month = [
+    "Januari",
+    "Febuari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "Nopember",
+    "Desember",
+  ];
+
+  let date = time.getDate();
+  let monthIndex = time.getMonth();
+  let year = time.getFullYear();
+
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
+
+  if (hours < 10) {
+    hours = "0" + hours;
+  } else if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
+  // 12 Agustus 2022 09.04
+  let fullTime = `${date} ${month[monthIndex]} ${year}`;
+  // console.log(fullTime);
+  return fullTime;
 }
 
 app.listen(port, () => {
